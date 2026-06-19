@@ -5,7 +5,7 @@ body {
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
-    min-height: 100vh; 
+    min-height: 100vh;
 }
 
 body.bg {
@@ -20,6 +20,7 @@ h1 {
 	left: 10%;
   	margin-top: 10%;
 }
+
 h2 {
 	font-size: 150%;
 	color: #000000;
@@ -146,226 +147,165 @@ h2 {
 }
 
 .c1 {
-    /*background-color: #b57b7b;*/
     width: 50vw;
     height: 30vh;
-    position: absolute;
-    top: 35vh;
-    left: 7%;
+    margin: 5vh auto 50px auto;
+    text-align: center; 
     font-size: 130%;
 }
 
-.c2-1 {
-    width: 300px; 
-    height: auto;
-    position: absolute;
-    top: 35vh;
-    left: 65%;
-}
-.c2-2 {
-    width: 300px; 
-    height: auto;
-    position: absolute;
-    top: 70vh;
-    left: 55%;
+body {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+    background-color: #f5f5f5;
+    transition: background 0.3s ease;
 }
 
 
+img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    transition: transform 0.4s ease, z-index 0s, filter 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+img:hover {
+    transform: scale(1.8);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
 
-.s1 {
-    width: 230px; 
-    height: auto;
-    position: absolute;
-    top: 35vh;
-    left: 10%;
-}
-.s2 {
-    width: 220px; 
-    height: auto;
-    position: absolute;
-    top: 43vh;
-    left: 28%;
-}
-.s3 {
-    width: 270px; 
-    height: auto;
-    position: absolute;
-    top: 55vh;
-    left: 5%;
-}
-.s4 {
-    width: 250px; 
-    height: auto;
-    position: absolute;
-    top: 80vh;
-    left: 10%;
-}
-.s5 {
-    width: 250px; 
-    height: auto;
-    position: absolute;
-    top: 70vh;
-    left: 30%;
-}
-.h1 {
-    width: 400px; 
-    height: auto;
-    position: absolute;
-    top: 35vh;
-    left: 67%;
-}
-.h2 {
-    width: 280px; 
-    height: auto;
-    position: absolute;
-    top: 55vh;
-    left: 60%;
-}
-.h3 {
-    width: 400px; 
-    height: auto;
-    position: absolute;
-    top: 88vh;
-    left: 50%;
-}
-.h4 {
-    width: 250px; 
-    height: auto;
-    position: absolute;
-    top: 70vh;
-    left: 80%;
+body:has(img:hover) img:not(:hover) {
+    filter: blur(4px) grayscale(30%);
+    opacity: 0.6;
 }
 
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        height: auto !important;
+        display: block !important; 
+        padding: 40px !important;
+    }
 
+    h1 {
+        font-size: 500% !important; 
+        position: static !important;   
+        text-align: center;            
+        margin: 40px 0 20px 0 !important; 
+    }
 
-.BK1 {
-    width: 700px; 
-    height: auto;
-    position: absolute;
-    top: 28vh;
-    left: 2%;
-}
-.BK2 {
-    width: 380px; 
-    height: auto;
-    position: absolute;
-    top: 85vh;
-    left: 2%;
-}
-.BK3 {
-    width: 380px; 
-    height: auto;
-    position: absolute;
-    top: 85vh;
-    left: 28%;
-}
-.BK4 {
-    width: 380px; 
-    height: auto;
-    position: absolute;
-    top: 85vh;
-    left: 53%;
-}
-.BK5 {
-    width: 380px; 
-    height: auto;
-    position: absolute;
-    top: 85vh;
-    left: 75%;
-}
+    .c1 {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 800px;
+        margin: 0 auto 40px auto !important; 
+        text-align: center;
+        position: static !important; 
+    }
 
-
-.O1 {
-    width: 500px; 
-    height: auto;
-    position: absolute;
-    top: 28vh;
-    left: 2%;
-}
-.O2{
-    width: 500px; 
-    height: auto;
-    position: absolute;
-    top: 30vh;
-    left: 36%;
-}
-.O3 {
-    width: 400px; 
-    height: auto;
-    position: absolute;
-    top: 28vh;
-    left: 70%;
-}
-.O4 {
-    width: 500px; 
-    height: auto;
-    position: absolute;
-    top: 70vh;
-    left: 5%;
-}
-.O5 {
-    width: 350px; 
-    height: auto;
-    position: absolute;
-    top: 60vh;
-    left: 43%;
+    .c2-1, .c2-2,
+    .s1, .s2, .s3, .s4, .s5, 
+    .h1, .h2, .h3, .h4,
+    .BK1, .BK2, .BK3, .BK4, .BK5,
+    .O1, .O2, .O3, .O4, .O5,
+    .E1, .E2, .E3, .E4, .E5, .E6, .E7, .E8 {
+        position: static !important;
+        display: inline-block !important; 
+        width: 29% !important;            
+        max-width: 280px !important;  
+        height: auto !important;
+        margin: 15px 1.5% !important;     
+        vertical-align: top;
+    }
 }
 
 
-.E1 {
-    width: 250px; 
-    height: auto;
-    position: absolute;
-    top: 28vh;
-    left: 2%;
-}
-.E2 {
-    width: 400px; 
-    height: auto;
-    position: absolute;
-    top: 33vh;
-    left: 25%;
-}
-.E3 {
-    width: 300px; 
-    height: auto;
-    position: absolute;
-    top: 28vh;
-    left: 55%;
-}
-.E4 {
-    width: 280px; 
-    height: auto;
-    position: absolute;
-    top: 25vh;
-    left: 80%;
-}
-.E5 {
-    width: 300px; 
-    height: auto;
-    position: absolute;
-    top: 75vh;
-    left: 2%;
-}
-.E6 {
-    width: 280px; 
-    height: auto;
-    position: absolute;
-    top: 57vh;
-    left: 25%;
-}
-.E7 {
-    width: 300px; 
-    height: auto;
-    position: absolute;
-    top: 97vh;
-    left: 35%;
-}
-.E8 {
-    width: 250px; 
-    height: auto;
-    position: absolute;
-    top: 65vh;
-    left: 60%;
+@media (max-width: 768px) {
+    body {
+        height: auto !important;
+        display: flex !important; 
+        flex-direction: column !important;   
+        align-items: center !important;
+        gap: 20px !important;
+        padding: 40px 20px !important;
+    }
+
+    h1 {
+        font-size: 250% !important;
+        position: static !important;   
+        text-align: center;            
+        margin: 20px 0 !important; 
+    }
+
+    .c1 {
+        width: 90% !important;
+        height: auto !important;
+        min-height: min-content !important; 
+        position: static !important;
+        margin: 20px 0 !important;
+        text-align: left !important;     
+        display: block !important;
+    }
+    
+    .c1 h3 {
+        text-align: center !important; 
+        font-size: 1.4rem !important;
+        margin-bottom: 15px !important;
+        position: static !important;
+    }
+    
+    .c1 p {
+        font-size: 1rem !important;
+        line-height: 1.7 !important;
+        word-break: keep-all !important;
+        margin: 0 !important;
+        position: static !important;
+    }
+
+    .c2-1, .c2-2,
+    .s1, .s2, .s3, .s4, .s5, 
+    .h1, .h2, .h3, .h4,
+    .BK1, .BK2, .BK3, .BK4, .BK5,
+    .O1, .O2, .O3, .O4, .O5,
+    .E1, .E2, .E3, .E4, .E5, .E6, .E7, .E8 {
+        position: static !important;
+        display: inline-block !important;
+        width: 85% !important;
+        max-width: 350px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+    }
+
+    .c2-1, .c2-2,
+    .s1, .s2, .s3, .s4, .s5, 
+    .h1, .h2, .h3, .h4,
+    .BK1, .BK2, .BK3, .BK4, .BK5,
+    .O1, .O2, .O3, .O4, .O5,
+    .E1, .E2, .E3, .E4, .E5, .E6, .E7, .E8 {
+        position: static !important;
+        display: inline-block !important;
+        width: 150px !important;
+        max-width: 40% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease !important;
+    }
+
+    .s1:hover, .s2:hover, .s3:hover, .s4:hover, .s5:hover,
+    .h1:hover, .h2:hover, .h3:hover, .h4:hover,
+    .BK1:hover, .BK2:hover, .BK3:hover, .BK4:hover, .BK5:hover,
+    .O1:hover, .O2:hover, .O3:hover, .O4:hover, .O5:hover,
+    .E1:hover, .E2:hover, .E3:hover, .E4:hover, .E5:hover, .E6:hover, .E7:hover, .E8:hover {
+        
+        transform: scale(1.4) !important;     
+        z-index: 10 !important;
+    }
 }
