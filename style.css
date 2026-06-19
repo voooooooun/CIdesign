@@ -7,7 +7,6 @@ body {
     margin: 0;
     min-height: 100vh;
 }
-
 body.bg {
     background-color: #ffffff;
     background-image: none;
@@ -164,21 +163,34 @@ body {
     transition: background 0.3s ease;
 }
 
+body {
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+    padding: 50px 20px !important;
+}
 
 img {
-    width: 200px;
-    height: auto;
+
+    width: 90% !important;  
+    max-width: 450px !important; 
+    height: auto !important; 
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     
     transition: transform 0.4s ease, z-index 0s, filter 0.4s ease;
     cursor: pointer;
-    position: relative;
-    z-index: 1;
+    
+    position: static !important; 
+    margin: 0 auto !important; 
 }
+
 img:hover {
-    transform: scale(1.8);
-    z-index: 10;
+    transform: scale(1.2) !important;
+    position: relative !important;
+    z-index: 10 !important;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -186,7 +198,6 @@ body:has(img:hover) img:not(:hover) {
     filter: blur(4px) grayscale(30%);
     opacity: 0.6;
 }
-
 
 @media (min-width: 769px) and (max-width: 1024px) {
     body {
@@ -196,10 +207,10 @@ body:has(img:hover) img:not(:hover) {
     }
 
     h1 {
-        font-size: 500% !important; 
+        font-size: 800% !important; 
         position: static !important;   
         text-align: center;            
-        margin: 40px 0 20px 0 !important; 
+        margin: 200px 0 10px 0 !important; 
     }
 
     .c1 {
@@ -272,13 +283,17 @@ body:has(img:hover) img:not(:hover) {
 
     
     h1 {
-        font-size: 250% !important;      
+        font-size: 500% !important;      
         position: static !important;   
         text-align: center;            
-        margin: 50px 0 !important; 
+        margin: 200px 0 !important; 
+    }
+    h2{
+        font-size: 150% !important;
+        left: auto !important;
+        right: 15px !important;    
     }
 
-    
     .c1 {
         width: 95% !important;
         height: auto !important;         
