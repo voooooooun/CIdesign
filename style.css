@@ -229,43 +229,60 @@ body:has(img:hover) img:not(:hover) {
 
 
 @media (max-width: 768px) {
-    .top-menu {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-around !important;
-        width: 100% !important;
-        padding: 10px 0 !important;
-        overflow-x: auto;
-        white-space: nowrap;        
-    }
-
-    
-    .top-menu li a {
-        font-size: 14px !important;
-        white-space: nowrap !important;
-        padding: 5px 8px !important;
-    
     body {
         height: auto !important;
         display: flex !important; 
         flex-direction: column !important;   
         align-items: center !important;
-        gap: 20px !important;
-        padding: 40px 20px !important;
+        gap: 30px !important;            
+        padding: 40px 10px !important;
     }
 
+    
+    .top-menu {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px 5px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+        list-style: none !important;
+    }
+
+    
+    .top-menu li {
+        flex: 1 !important;
+        text-align: center !important; 
+        height: auto !important;
+        display: block !important;
+    }
+
+    
+    .top-menu li a {
+        font-size: 13px !important; 
+        white-space: nowrap !important; 
+        display: inline-block !important;
+        width: 100% !important;
+        color: #000000 !important;
+        text-decoration: none !important;
+        font-weight: bold !important;
+    }
+
+    
     h1 {
-        font-size: 250% !important;
+        font-size: 250% !important;      
         position: static !important;   
         text-align: center;            
-        margin: 20px 0 !important; 
+        margin: 50px 0 !important; 
     }
 
+    
     .c1 {
-        width: 90% !important;
-        height: auto !important;
-        min-height: min-content !important; 
-        position: static !important;
+        width: 95% !important;
+        height: auto !important;         
+        position: static !important;     
         margin: 20px 0 !important;
         text-align: left !important;     
         display: block !important;
@@ -273,14 +290,14 @@ body:has(img:hover) img:not(:hover) {
     
     .c1 h3 {
         text-align: center !important; 
-        font-size: 1.4rem !important;
-        margin-bottom: 15px !important;
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
         position: static !important;
     }
     
     .c1 p {
-        font-size: 1rem !important;
-        line-height: 1.7 !important;
+        font-size: 1.05rem !important;
+        line-height: 1.7 !important;     
         word-break: keep-all !important;
         margin: 0 !important;
         position: static !important;
@@ -293,35 +310,10 @@ body:has(img:hover) img:not(:hover) {
     .O1, .O2, .O3, .O4, .O5,
     .E1, .E2, .E3, .E4, .E5, .E6, .E7, .E8 {
         position: static !important;
-        display: inline-block !important;
-        width: 85% !important;
-        max-width: 350px !important;
+        display: block !important;
+        width: 90% !important;        
+        max-width: 400px !important;
         height: auto !important;
-        margin: 0 auto !important;
-    }
-
-    .c2-1, .c2-2,
-    .s1, .s2, .s3, .s4, .s5, 
-    .h1, .h2, .h3, .h4,
-    .BK1, .BK2, .BK3, .BK4, .BK5,
-    .O1, .O2, .O3, .O4, .O5,
-    .E1, .E2, .E3, .E4, .E5, .E6, .E7, .E8 {
-        position: static !important;
-        display: inline-block !important;
-        width: 150px !important;
-        max-width: 40% !important;
-        height: auto !important;
-        margin: 0 auto !important;
-        transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease !important;
-    }
-
-    .s1:hover, .s2:hover, .s3:hover, .s4:hover, .s5:hover,
-    .h1:hover, .h2:hover, .h3:hover, .h4:hover,
-    .BK1:hover, .BK2:hover, .BK3:hover, .BK4:hover, .BK5:hover,
-    .O1:hover, .O2:hover, .O3:hover, .O4:hover, .O5:hover,
-    .E1:hover, .E2:hover, .E3:hover, .E4:hover, .E5:hover, .E6:hover, .E7:hover, .E8:hover {
-        
-        transform: scale(1.4) !important;     
-        z-index: 10 !important;
+        margin: 15px auto !important;   
     }
 }
